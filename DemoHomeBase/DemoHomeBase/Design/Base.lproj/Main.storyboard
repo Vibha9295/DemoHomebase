@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aw8-lo-PvQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ShiftsVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ShiftsVC" title="ShiftsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ShiftsVC" customModule="DemoHomeBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Rv-sY-pcd">
+                                <rect key="frame" x="5" y="134" width="404" height="718"/>
+                                <color key="backgroundColor" red="0.43921568989999998" green="0.30196079609999998" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ung-DQ-JWh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="u5c-pQ-luC"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxv-qz-vGr">
+                                <rect key="frame" x="238.5" y="94" width="165.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="E0o-1x-1zM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Shift">
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnAddShiftAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prI-OK-xJZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Co Shifts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbi-UX-QOp">
+                                <rect key="frame" x="10" y="54" width="171.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.43921568989999998" green="0.30196079609999998" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="gxv-qz-vGr" firstAttribute="top" secondItem="Dbi-UX-QOp" secondAttribute="top" constant="40" id="9ge-lZ-DAA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Rv-sY-pcd" secondAttribute="trailing" constant="5" id="AUm-1a-VIp"/>
+                            <constraint firstItem="5Rv-sY-pcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Ady-bP-7Qa"/>
+                            <constraint firstItem="Dbi-UX-QOp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FMm-4G-h1k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gxv-qz-vGr" secondAttribute="trailing" constant="10" id="JHo-SA-vRk"/>
+                            <constraint firstItem="gxv-qz-vGr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Yp6-BW-B1U"/>
+                            <constraint firstItem="5Rv-sY-pcd" firstAttribute="top" secondItem="gxv-qz-vGr" secondAttribute="bottom" constant="10" id="gF1-QI-HQo"/>
+                            <constraint firstItem="Dbi-UX-QOp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wGH-Zz-kaV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Rv-sY-pcd" secondAttribute="bottom" constant="10" id="xJM-Gc-ddM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Coffee Co Shifts" id="UOz-Eo-1N7"/>
+                    <connections>
+                        <outlet property="tblShifts" destination="5Rv-sY-pcd" id="hyg-J2-byk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="78"/>
+        </scene>
+        <!--CreateShiftVC-->
+        <scene sceneID="y10-MH-Xbm">
+            <objects>
+                <viewController storyboardIdentifier="CreateShiftVC" title="CreateShiftVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GYk-gr-RG6" customClass="CreateShiftVC" customModule="DemoHomeBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUu-XI-tD0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-AV-yEe">
+                                <rect key="frame" x="280" y="94" width="124" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mv5-la-t1e"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save">
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnSaveAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="gs9-aT-xKg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyf-Wd-Fxc">
+                                <rect key="frame" x="10" y="94" width="76.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FzD-ZM-kLv"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Shifts">
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnBackAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="yic-el-Nnb"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bNK-A6-5Nd">
+                                <rect key="frame" x="30" y="159.5" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qN1-C8-7KJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="34"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-3T-DDO">
+                                        <rect key="frame" x="97" y="0.0" width="217" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUO-G8-iek">
+                                        <rect key="frame" x="329" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Q6C-Vw-hOp"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="calendar" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnStartDateAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="oLq-zN-kBU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aiV-Mc-krA">
+                                <rect key="frame" x="30" y="213.5" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE3-9A-Peo">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="34"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZW8-m2-bM4">
+                                        <rect key="frame" x="97" y="0.0" width="217" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-FU-eVi">
+                                        <rect key="frame" x="329" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="oWX-RW-Bxh"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="calendar" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnEndDateAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="zkf-aU-zTN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N14-li-tj8">
+                                <rect key="frame" x="30" y="267.5" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emplyoee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bc-ru-fzq">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="34"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-aw-qTr">
+                                        <rect key="frame" x="102" y="0.0" width="217" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shr-Vn-it7">
+                                        <rect key="frame" x="329" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="S3P-7O-TOh"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.down.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnSelectEmplyoeeAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="cnF-ve-Up3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Qe-F3-fQL">
+                                <rect key="frame" x="30" y="321.5" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P3-Yf-jZ1">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="34"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld5-hP-GbI">
+                                        <rect key="frame" x="102" y="0.0" width="217" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-dW-gTj">
+                                        <rect key="frame" x="329" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Mgn-8q-lwF"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.down.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnSelectRoleAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="0Am-4T-l7e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-kZ-ueD">
+                                <rect key="frame" x="30" y="375.5" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As7-Ga-RHB">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="34"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Do-wN-Qj3">
+                                        <rect key="frame" x="102" y="0.0" width="217" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-OC-I8Z">
+                                        <rect key="frame" x="329" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="BOc-5p-y9W"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.down.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnColorAct:" destination="GYk-gr-RG6" eventType="touchUpInside" id="EX0-Ny-djQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Shift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQB-BA-v0m">
+                                <rect key="frame" x="132.5" y="54" width="149" height="31.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BTL-OY-PzW"/>
+                        <color key="backgroundColor" red="0.43921568989999998" green="0.30196079609999998" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9Do-wN-Qj3" firstAttribute="width" secondItem="Ld5-hP-GbI" secondAttribute="width" id="0So-2k-31j"/>
+                            <constraint firstItem="aiV-Mc-krA" firstAttribute="trailing" secondItem="bNK-A6-5Nd" secondAttribute="trailing" id="1OU-bI-ae9"/>
+                            <constraint firstItem="aiV-Mc-krA" firstAttribute="leading" secondItem="bNK-A6-5Nd" secondAttribute="leading" id="4jm-Tw-T5w"/>
+                            <constraint firstItem="dBR-AV-yEe" firstAttribute="centerY" secondItem="wyf-Wd-Fxc" secondAttribute="centerY" id="9X4-aZ-RMV"/>
+                            <constraint firstItem="PQB-BA-v0m" firstAttribute="top" secondItem="BTL-OY-PzW" secondAttribute="top" constant="10" id="CdY-8W-UMT"/>
+                            <constraint firstItem="bNK-A6-5Nd" firstAttribute="leading" secondItem="BTL-OY-PzW" secondAttribute="leading" constant="30" id="DMd-DZ-RV1"/>
+                            <constraint firstItem="bTd-kZ-ueD" firstAttribute="trailing" secondItem="5Qe-F3-fQL" secondAttribute="trailing" id="Fgk-ex-pbQ"/>
+                            <constraint firstItem="5Qe-F3-fQL" firstAttribute="trailing" secondItem="N14-li-tj8" secondAttribute="trailing" id="Mys-uz-8S3"/>
+                            <constraint firstItem="dBR-AV-yEe" firstAttribute="top" secondItem="PQB-BA-v0m" secondAttribute="top" constant="40" id="RDa-Yq-N1z"/>
+                            <constraint firstItem="BTL-OY-PzW" firstAttribute="trailing" secondItem="bNK-A6-5Nd" secondAttribute="trailing" constant="30" id="Tsp-mA-VJ9"/>
+                            <constraint firstItem="wyf-Wd-Fxc" firstAttribute="leading" secondItem="BTL-OY-PzW" secondAttribute="leading" constant="10" id="X39-kj-e5p"/>
+                            <constraint firstItem="N14-li-tj8" firstAttribute="trailing" secondItem="aiV-Mc-krA" secondAttribute="trailing" id="XfW-Cd-SYz"/>
+                            <constraint firstItem="5Qe-F3-fQL" firstAttribute="leading" secondItem="N14-li-tj8" secondAttribute="leading" id="XvD-x0-ll6"/>
+                            <constraint firstItem="aiV-Mc-krA" firstAttribute="top" secondItem="bNK-A6-5Nd" secondAttribute="bottom" constant="20" id="ZDL-z3-Zkb"/>
+                            <constraint firstItem="PQB-BA-v0m" firstAttribute="centerX" secondItem="eUu-XI-tD0" secondAttribute="centerX" id="ZUg-Tq-mpm"/>
+                            <constraint firstItem="BTL-OY-PzW" firstAttribute="trailing" secondItem="dBR-AV-yEe" secondAttribute="trailing" constant="10" id="aOA-1R-myG"/>
+                            <constraint firstItem="N14-li-tj8" firstAttribute="top" secondItem="aiV-Mc-krA" secondAttribute="bottom" constant="20" id="cwH-Pb-SvL"/>
+                            <constraint firstItem="ZW8-m2-bM4" firstAttribute="width" secondItem="oO0-3T-DDO" secondAttribute="width" id="hUa-uJ-guA"/>
+                            <constraint firstItem="dBR-AV-yEe" firstAttribute="width" secondItem="eUu-XI-tD0" secondAttribute="width" multiplier="0.3" id="hXn-bI-ds3"/>
+                            <constraint firstItem="bTd-kZ-ueD" firstAttribute="top" secondItem="5Qe-F3-fQL" secondAttribute="bottom" constant="20" id="j0p-DQ-K4x"/>
+                            <constraint firstItem="N14-li-tj8" firstAttribute="leading" secondItem="aiV-Mc-krA" secondAttribute="leading" id="juw-JP-GBd"/>
+                            <constraint firstItem="bTd-kZ-ueD" firstAttribute="leading" secondItem="5Qe-F3-fQL" secondAttribute="leading" id="kOD-CF-gqX"/>
+                            <constraint firstItem="N3d-aw-qTr" firstAttribute="width" secondItem="ZW8-m2-bM4" secondAttribute="width" id="pSI-nq-8DZ"/>
+                            <constraint firstItem="bNK-A6-5Nd" firstAttribute="top" secondItem="dBR-AV-yEe" secondAttribute="bottom" constant="35.5" id="plj-DI-JYA"/>
+                            <constraint firstItem="Ld5-hP-GbI" firstAttribute="width" secondItem="N3d-aw-qTr" secondAttribute="width" id="tHe-Lx-Wv2"/>
+                            <constraint firstItem="5Qe-F3-fQL" firstAttribute="top" secondItem="N14-li-tj8" secondAttribute="bottom" constant="20" id="urH-RQ-FAQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Shift" id="9nX-RJ-nx2"/>
+                    <connections>
+                        <outlet property="txtColor" destination="9Do-wN-Qj3" id="vxY-Cp-xfx"/>
+                        <outlet property="txtEmployee" destination="N3d-aw-qTr" id="c8p-WA-DlX"/>
+                        <outlet property="txtEndDate" destination="ZW8-m2-bM4" id="1gg-Ks-u2j"/>
+                        <outlet property="txtRole" destination="Ld5-hP-GbI" id="ChB-zH-JE1"/>
+                        <outlet property="txtStartDate" destination="oO0-3T-DDO" id="Dk5-1G-CID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oK4-BS-fax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dJD-dp-iaR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aw8-lo-PvQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="oKy-cZ-B7o">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L7k-W4-iOu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJx-vn-h6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.down.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
